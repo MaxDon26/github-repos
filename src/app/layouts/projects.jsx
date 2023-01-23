@@ -9,7 +9,18 @@ const Projects = () => {
   return (
     <div>
       <SearchForm />
-      {!isLoading ? <Cards /> : <GridLoader />}
+      {!isLoading ? (
+        <Cards />
+      ) : (
+        <GridLoader
+          color="#00A3FF"
+          cssOverride={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+          }}
+        />
+      )}
     </div>
   );
 };
