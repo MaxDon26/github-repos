@@ -19,6 +19,7 @@ const SearchForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    localStorageService.setCurrentPage(1);
     dispatch(fetchProjects(value));
   };
 
